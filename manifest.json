@@ -1,5 +1,6 @@
 {
   "name": "Kin Bálou",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "/img/android-icon-36x36.png",
