@@ -3,10 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kin Bálou</title>
+    <title>Kin Bálou / Rita K.</title>
     <meta
       name="description"
-      content="Kin Balou und Rita K. am 23. Mai 2020 live in der Kulturhalle Sägegasse in Burgdorf."
+      content="Kin Bálou und Rita K. am 23. Mai 2020 live in der Kulturhalle Sägegasse in Burgdorf."
+    />
+    <meta property="og:title" content="Kin Bálou / Rita K." />
+    <meta
+      property="og:description"
+      content="Kin Bálou und Rita K. am 23. Mai 2020 live in der Kulturhalle Sägegasse in Burgdorf."
+    />
+    <meta property="og:image" content="https://kinbalou.ch/img/kbrk.1440.jpg" />
+    <meta property="og:url" content="https://kinbalou.ch" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:site_name" content="Kin Bálou" />
+    <meta
+      name="twitter:image:alt"
+      content="Titelbild des Konzerts von Kin Bálou und Rita K."
     />
     <link
       rel="apple-touch-icon"
@@ -99,7 +112,7 @@
   </head>
 
   <body>
-    <time datetime="2020-05-23">
+    <time data-content="23052020" datetime="2020-05-23">
       23052020
     </time>
 
@@ -133,10 +146,10 @@
     />
 
     <main>
-      <input type="checkbox" id="reveal" />
+      <input type="checkbox" aria-hidden="true" id="reveal" />
 
       <h1>
-        <label aria-hidden for="reveal">
+        <label aria-hidden="true" for="reveal">
           <span></span>
           <span></span>
           <span></span>
@@ -202,7 +215,6 @@
     </main>
 
     <div class="noise-wrapper">
-      <!-- <video muted autoplay loop src="/video.webm"></video> -->
       <div class="noise"></div>
     </div>
   </body>
