@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/fonts/CascadiaCode.woff") format("woff"),
+    url("/fonts/CascadiaCode.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Anton";
+  font-weight: normal;
+  src: url("/fonts/anton-regular.woff") format("woff"),
+    url("/fonts/anton-regular.woff2") format("woff2");
+}
+
 *,
 *::before,
 *::after {
@@ -17,7 +30,6 @@ body {
   min-height: 100vh;
   background: #1a1a1a;
   overflow-x: hidden;
-  min-height: 100vh;
   animation: h-rot 10s linear 0s infinite;
 }
 
@@ -33,8 +45,7 @@ h6 {
 }
 
 h1 {
-  margin-left: auto;
-  margin-right: 0;
+  margin-inline: auto;
   margin-top: 0;
   font-size: 7vw;
   font-size: clamp(2.5rem, 13vw, 5rem);
@@ -50,6 +61,7 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100vh;
+  object-fit: contain;
 }
 
 .imgs {
@@ -72,15 +84,16 @@ img {
   bottom: 0;
 }
 
-.imgs .happy-elephants {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  /* animation: flicker 4s linear infinite; */
-  will-change: opacity;
-  transition: opacity 0.05s;
-  opacity: 1;
+footer {
+  margin-block: 1rem;
+}
+
+.small {
+  font-size: 0.5rem;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .container {
@@ -118,83 +131,10 @@ nav a svg {
   height: 1.5em;
 }
 
-.noise-wrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.noise {
-  height: 300%;
-  width: 300%;
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  background-repeat: repeat;
-  background-image: url(/img/noise.png);
-  opacity: 0.8;
-  will-change: transform;
-  z-index: 10002;
-  pointer-events: none;
-  user-select: none;
-  animation: grain 2s steps(10) infinite;
-}
-
-@keyframes grain {
-  0%,
-  to {
-    transform: translate(0);
-  }
-
-  10% {
-    transform: translate(-510px, -510px);
-  }
-
-  20% {
-    transform: translate(-515px, 55px);
-  }
-
-  30% {
-    transform: translate(57px, -525px);
-  }
-
-  40% {
-    transform: translate(521px, 525px);
-  }
-
-  50% {
-    transform: translate(-525px, 510px);
-  }
-
-  60% {
-    transform: translate(515px, 55px);
-  }
-
-  70% {
-    transform: translate(50px, 515px);
-  }
-
-  80% {
-    transform: translate(525px, 535px);
-  }
-
-  90% {
-    transform: translate(-510px, 510px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
     transition: none !important;
-  }
-
-  .noise {
-    display: none !important;
   }
 }
 
@@ -205,55 +145,4 @@ nav a svg {
   100% {
     filter: hue-rotate(360deg);
   }
-}
-
-@keyframes flicker {
-	from {
-		opacity: 1;
-	}
-	4% {
-		opacity: 1;
-	}
-	5% {
-		opacity: 0.45;
-	}
-	10% {
-		opacity: 0.45;
-	}
-	11% {
-		opacity: 1;
-	}
-	26% {
-		opacity: 1;
-	}
-	29% {
-		opacity: 0.1;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  31% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 0.5;
-  }
-  34% {
-    opacity: 0;
-  }
-	38% {
-		opacity: 0.45;
-  }
-  39% {
-    opacity: 0;
-  }
-	43% {
-		opacity: 0.6;
-	}
-	44% {
-		opacity: 1;
-  }
-	to {
-		opacity: 1;
-	}
 }
