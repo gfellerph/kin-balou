@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kin Bálou - "Part II"</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
+    <title>Kin Bálou</title>
     <link rel="stylesheet" href="/styles.css" />
     <meta
       name="description"
-      content='Die neue EP von Kin Bàlou, "Part II", ist ein aufregender Neuanfang.'
+      content="Creating pulsating electronic beats and atmospheric soundscapes."
     />
-    <meta property="og:title" content="Kin Bálou - Part II" />
+    <meta property="og:title" content="Kin Bálou" />
     <meta
       property="og:description"
-      content='Die neue EP von Kin Bàlou, "Part II", ist ein aufregender Neuanfang.'
+      content="Creating pulsating electronic beats and atmospheric soundscapes."
     />
-    <meta property="og:image" content="https://kinbalou.ch/img/part_II.jpg" />
+    <meta
+      property="og:image"
+      content="https://kinbalou.ch/img/black-ice_1200.jpeg"
+    />
     <meta property="og:url" content="https://kinbalou.ch" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="og:site_name" content="Kin Bálou - Part II" />
+    <meta property="og:site_name" content="Kin Bálou" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -37,28 +41,43 @@
 
   <body>
     <main>
-      <div class="imgs">
+      <img class="cover-image" src="/img/black-ice_1200.jpeg" alt="" />
+      <input
+        type="checkbox"
+        class="visually-hidden"
+        name="light-dark"
+        id="light-dark"
+      />
+      <label for="light-dark" class="visually-hidden">Light mode</label>
+
+      <div class="container">
         <h1>KIN&nbsp;BÁLOU</h1>
-        <img src="/img/part_II.jpg" alt="" />
-        <h2>PART II</h2>
       </div>
 
       <div class="container">
+        <p class="lead">
+          <em
+            >Creating pulsating electronic beats and atmospheric
+            soundscapes.</em
+          >
+        </p>
+      </div>
+
+      <div class="container description">
         <p>
-          Die neue EP von Kin Bàlou, "Part II", ist ein aufregender Neuanfang.
+          As an electronic music artist, I draw inspiration from moments of my
+          everyday life, between total mental collapse and a kind summer breeze
+          while sitting together with both of my kids at a campfire in a goddamn
+          frozen volcano.
         </p>
         <p>
-          Mit vier brandneuen Tracks präsentiert der talentierte Künstler aus
-          Bern eine vielseitige Mischung aus breiten Klanglandschaften und
-          verspielten Basslines, die von treibenden Synthesizern begleitet
-          werden.
+          Voices and noises flicker trough space, accelerate trough a blend of
+          experimental electronic structures that bend like bubbles beneath the
+          crust under our feet. The oscillating atmosphere glitches and bleeps,
+          reflecting only the beauty of the beast.
         </p>
-        <p>
-          "Part II" ist ab sofort auf allen gängigen Streamingdiensten verfügbar
-          und verspricht ein musikalisches Erlebnis, das die Zuhörer:innen
-          begeistern wird.
-        </p>
-        <nav class="social">
+        <h2 id="social-navigation">Kin Bálou on social media</h2>
+        <nav class="social" aria-describedby="social-navigation">
           <a aria-label="Facebook" href="https://www.facebook.com/kinbal4/">
             <svg viewBox="0 0 18 18">
               <path
@@ -116,14 +135,8 @@
     </main>
 
     <footer class="small text-align-center">
-      © Kin Bálou, alle Rechte vorbehalten
+      © Kin Bálou, all rights reserved
     </footer>
-
-    <script
-      async
-      defer
-      data-website-id="2c43219f-b82d-4bab-a759-165825b8e8cc"
-      src="https://savory-umami.herokuapp.com/umami.js"
-    ></script>
+    <script src="/some.js" async defer></script>
   </body>
 </html>
